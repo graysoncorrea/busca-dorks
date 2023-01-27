@@ -11,10 +11,6 @@ import time
 import requests
 from googlesearch import search
 
-for url in search(self.query, tld=self.tld, num=self.num_results):
-    time.sleep(random.randint(5, 10)) # dorme por um número aleatório de segundos entre 5 e 10
-    self.results.append(url)
-
 class SearchEngine:
     def __init__(self, query, num_results=10, tld='co.in'):
         self.query = query
@@ -24,7 +20,8 @@ class SearchEngine:
         
     def search(self):
         for url in search(self.query, tld=self.tld, num=self.num_results):
-            self.results.append(url)
+    time.sleep(random.randint(5, 10))
+    self.results.append(url)
         
     def save_results(self, file_path):
         with open(file_path, 'w') as file:
