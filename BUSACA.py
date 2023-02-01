@@ -17,8 +17,8 @@ class SearchEngine:
         
     def search(self):
         for url in search(self.query, tld=self.tld, num=self.num_results):
-    time.sleep(random.randint(5, 10))
-    self.results.append(url)
+            time.sleep(random.randint(5, 10))
+            self.results.append(url)
         
     def save_results(self, file_path):
         with open(file_path, 'w') as file:
