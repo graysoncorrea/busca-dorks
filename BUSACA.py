@@ -3,9 +3,6 @@
 #stop: último resultado a recuperar. Use Nenhum para continuar pesquisando para sempre.
 #pause: lapso de espera entre as solicitações HTTP. 
 
-#instalações
-#pip install beautifulsoup4
-#pip install google
 import random
 import time
 import requests
